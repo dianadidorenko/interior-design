@@ -1,0 +1,1962 @@
+@import "var";
+@import "mixin";
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "MullerLight";
+  src: url("/fonts/MullerLight.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "MullerUltraLight";
+  src: url("/fonts/Muller-Trial-UltraLight.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "MullerThin";
+  src: url("/fonts/Muller Demo Thin 250.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "PlayfairDisplayBold";
+  src: url("/fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+  font-style: normal;
+}
+@font-face {
+  font-family: "PlayfairDisplayRegular";
+  src: url("/fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+p {
+  margin: 0;
+}
+
+.container-fluid {
+  max-width: $max-width;
+  background-color: #fdfaf3;
+  padding: 0;
+}
+.container {
+  padding: 0;
+}
+
+// Header
+
+header {
+  padding: 0 95px 95px 95px;
+  position: relative;
+  .bi-arrow-down {
+    display: none;
+  }
+  .left-dark-part {
+    position: absolute;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #233d53;
+    left: 0;
+    z-index: 2;
+    opacity: 0.98;
+    .socs {
+      width: 45%;
+      font-size: 15px;
+      opacity: 0.9;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+      a {
+        color: $white-color-fff;
+      }
+      .bi-instagram {
+        padding: 0 33px;
+      }
+    }
+  }
+  .top-part-header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 40px 0;
+    z-index: 3;
+    .icon-burger {
+      width: 20px;
+    }
+    .phone-icon {
+      display: flex;
+      .telephone {
+        font-family: "MullerLight";
+        color: $dark-brown-color;
+        padding-left: 10px;
+      }
+      .bi-telephone-fill {
+        color: $dark-brown-color;
+        opacity: 0.7;
+        font-size: 15px;
+      }
+    }
+    .logo {
+      padding-left: 180px;
+    }
+    .footer-logo {
+      display: none;
+    }
+  }
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    img {
+      object-fit: center/cover;
+      max-width: 100%;
+      height: 100%;
+    }
+    .carousel-indicators {
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      bottom: -60px;
+      .active {
+        background-color: $active-bg-carousel-indicator;
+      }
+      & > button {
+        background-color: $not-active-bg-car-ind;
+      }
+    }
+  }
+  .text-left-part {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    z-index: 3;
+    opacity: 0.98;
+    padding: 0;
+    padding-left: 176px;
+    h1 {
+      color: $white-color-fff;
+      font-size: 4vw;
+      font-family: "PlayfairDisplayBold";
+      padding-bottom: 30px;
+      display: flex;
+      margin: 0;
+    }
+    p {
+      font-family: "MullerLight";
+      font-size: 14px;
+      color: $light-grey-color;
+      padding-bottom: 35px;
+      width: 80%;
+    }
+    .bottom-button {
+      width: 57%;
+      text-align: center;
+      font-size: 14.45px;
+      color: $white-color-fff;
+      text-transform: uppercase;
+      background-color: $orange-color;
+      padding: 15px 0;
+      padding-left: 10px;
+      font-family: "Raleway";
+      font-weight: 900;
+      letter-spacing: 2.5px;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 8%;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+// Gallery item
+
+.item-gallery {
+  padding: 130px 95px 300px 95px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .item1 {
+    padding: 0 20px;
+  }
+  .item2 {
+    position: relative;
+    top: 210px;
+    padding: 0 20px;
+  }
+  .item3 {
+    padding: 0 20px;
+  }
+  .item4 {
+    position: relative;
+    top: 210px;
+    padding: 0 20px;
+  }
+  .number-p {
+    font-size: 85.43px;
+    font-family: "PlayfairDisplayBold";
+    color: $number-p;
+    padding-top: 0;
+  }
+  h3 {
+    width: 100%;
+    font-family: "Raleway";
+    font-size: 22px;
+    color: $h3-color;
+    margin-bottom: 0 !important;
+    font-weight: 600;
+  }
+  p {
+    font-family: "Raleway";
+    font-weight: 300;
+    padding-top: 30px;
+    font-size: 16px;
+    color: $grey-p-color;
+  }
+}
+
+// Portfolio
+
+.portfolio {
+  padding: 0;
+  padding: 0 95px 125px 95px;
+  h2 {
+    @include h2-style;
+    margin: 0;
+    padding-left: 0;
+  }
+  ul {
+    display: flex;
+    font-family: "Raleway";
+    font-weight: 300;
+    padding: 0;
+    padding-bottom: 60px;
+    margin: 0;
+    a {
+      color: $li-color;
+      margin-right: 50px;
+      &:hover {
+        padding-bottom: 10px;
+        font-weight: 600;
+        color: black;
+        border-bottom: 1px solid black;
+        transition: 0.3s;
+      }
+    }
+  }
+  .portfolio-items {
+    display: flex;
+    justify-content: center;
+    .portfolio-pic {
+      width: 100%;
+      height: 100%;
+    }
+    .portfolio-item1,
+    .portfolio-item3,
+    .portfolio-item4 {
+      position: relative;
+      perspective: 0px;
+      h3 {
+        position: absolute;
+        top: 0;
+        font-size: 16px;
+        font-family: "Raleway";
+        font-weight: 600;
+        color: #e5e7e7;
+        padding: 35px 20px;
+      }
+      .portfolio-p {
+        position: absolute;
+        left: -40px;
+        top: 80%;
+        font-family: "MullerUltraLight";
+        transform: rotateX(180deg) rotateY(180deg) rotate(90deg);
+        transform-style: preserve-3d;
+        color: $light-grey-color;
+        font-size: 15px;
+      }
+    }
+    .portfolio-item2 {
+      position: relative;
+      a {
+        .orange-bg {
+          position: absolute;
+          top: 45%;
+          left: 40%;
+          width: 100px;
+          height: 100px;
+        }
+        .bi-plus-lg {
+          position: absolute;
+          top: 47.5%;
+          left: 46.5%;
+          color: $white-color-fff;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+// Our Service
+.service {
+  padding: 0 110px 0 110px;
+  h2 {
+    @include h2-style;
+    padding-left: 0;
+  }
+  .our-service {
+    display: flex;
+    padding-bottom: 133px;
+    .aside-service {
+      width: 25%;
+      display: flex;
+      padding: 0;
+      ul {
+        font-family: "Raleway";
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        display: flex !important;
+        flex-direction: column !important;
+        li {
+          width: 75%;
+          margin-bottom: 80px;
+          a {
+            display: block;
+            color: $li-color;
+            line-height: 1.1;
+            font-size: 18px;
+            transition: 0.2s;
+            &:hover {
+              color: black;
+              font-weight: 600;
+              padding-left: 35px;
+            }
+          }
+        }
+      }
+    }
+    .main-block-service {
+      width: 75%;
+      padding: 0;
+      .service-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+      .general-block {
+        display: flex;
+        width: 94%;
+        .service-right-block {
+          width: 40%;
+          padding-top: 70px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          p {
+            font-family: "Raleway";
+            font-weight: 400;
+          }
+          a {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-transform: uppercase;
+            color: #213a50;
+            font-family: "Raleway";
+            font-weight: 800;
+            letter-spacing: 2px;
+            border: 2px solid #213a50;
+            padding: 20px 40px;
+          }
+        }
+      }
+      .service-text-block {
+        h3 {
+          font-family: "PlayfairDisplayRegular";
+          font-size: 30px;
+          color: $h3-color;
+          padding-top: 55px;
+          padding-bottom: 20px;
+          margin: 0;
+        }
+        p {
+          width: 90%;
+          font-size: 18px;
+          font-family: "Raleway";
+          font-weight: 300;
+          color: $grey-p-color;
+        }
+      }
+    }
+  }
+}
+
+// About Studio Section
+
+.about-studio {
+  background: url(images/o-studii-designa/47.png) center center/cover no-repeat;
+  height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .orange-bg {
+    width: 110px;
+    height: 110px;
+    border-radius: 100%;
+    background-color: #fbbd84;
+  }
+  .bi-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white-color-fff;
+    font-size: 55px;
+    height: 100%;
+  }
+  p {
+    margin-top: 20px;
+    color: $white-color-fff;
+    font-size: 18px;
+    font-family: "Raleway";
+    font-weight: 400;
+  }
+}
+
+// Work Stages
+
+.work-stages {
+  padding: 133px 110px 140px 110px;
+  h2 {
+    @include h2-style;
+    padding-left: 0;
+    padding-bottom: 20px;
+  }
+  h3 {
+    position: relative;
+    font-size: 20px;
+    font-family: "Raleway";
+    font-weight: 600;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 2px;
+      bottom: -20px;
+      left: 0;
+      background-color: #56626d;
+    }
+  }
+  p {
+    padding-top: 25px;
+    font-size: 16px;
+    color: $grey-p-color;
+    width: 100%;
+  }
+  .work-stage-item1,
+  .work-stage-item2,
+  .work-stage-item3,
+  .work-stage-item4,
+  .work-stage-item5,
+  .work-stage-item6 {
+    display: flex;
+    width: 30%;
+    .work-stage-text-part {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+    }
+  }
+  .work-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  i {
+    margin-top: 60px;
+    display: flex;
+    font-size: 22px;
+    color: #fce6d2;
+    background-color: black;
+    border-radius: 50px;
+    height: 22px;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+  .work-stage-text-part {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 60px;
+  }
+}
+
+// Do you dreaam about design?
+
+.form-sect {
+  height: auto;
+  padding: 0;
+  display: flex;
+  .form-section {
+    background-color: $dark-bg;
+    width: 50%;
+    height: auto;
+    padding: 87px 80px 80px 95px;
+    .form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $grey-p-color;
+        color: $grey-p-color;
+        padding-bottom: 18px;
+        padding-top: 34px;
+        outline: none;
+        font-size: 14px;
+        font-family: "Raleway";
+        font-weight: 300;
+      }
+      .bi-person {
+        position: absolute;
+        color: $grey-p-color;
+        right: 0;
+        top: 25px;
+        font-size: 30px;
+      }
+      .bi-telephone-forward {
+        position: absolute;
+        color: $grey-p-color;
+        right: 0;
+        top: 100px;
+        font-size: 25px;
+      }
+      .bi-envelope {
+        position: absolute;
+        color: $grey-p-color;
+        right: 0;
+        top: 180px;
+        font-size: 25px;
+      }
+    }
+    a {
+      width: 100%;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: $white-color-fff;
+      text-transform: uppercase;
+      border: 2px solid $white-color-fff;
+      padding: 20px 90px;
+      border-radius: 10px;
+      font-family: "Raleway";
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+    h2 {
+      @include h2-style;
+      margin: 0;
+      color: $white-color-fff;
+      padding: 0;
+      font-size: 40px;
+      font-family: "PlayfairDisplayBold";
+      line-height: 1.4;
+    }
+    p {
+      color: $grey-p-color;
+      font-size: 14px;
+      font-family: "Raleway";
+      font-weight: 400;
+      padding: 0;
+      padding-top: 25px;
+      text-align: center;
+    }
+    .after-button-p {
+      padding: 0;
+      line-height: 1.2;
+    }
+  }
+  .photo-section {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Feedback
+
+.feedback {
+  margin: auto;
+  padding-bottom: 200px;
+  text-align: left;
+  padding-top: 150px;
+  position: relative;
+  .third {
+    position: absolute;
+    left: -75%;
+  }
+  .second {
+    position: absolute;
+    right: -68%;
+  }
+  h2 {
+    @include h2-style;
+    margin: 0;
+    padding-bottom: 100px;
+  }
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel-inner {
+    background-color: $white-color-fff;
+    margin: 0;
+    width: 50%;
+    height: 300px;
+    padding: 50px 50px 50px 60px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    .carousel-item {
+      display: flex;
+      .main-pic {
+        position: absolute;
+        right: -180px;
+        top: -8px;
+        width: 220px;
+        height: 220px;
+      }
+      .carousel-caption {
+        position: static;
+        width: 90% !important;
+        text-align: left;
+        h4 {
+          font-size: 22px;
+          font-family: "Raleway";
+          font-weight: 600;
+          color: $h3-color;
+        }
+        h5 {
+          font-family: "Raleway";
+          font-size: 16px;
+          font-weight: 700;
+          color: $orange-color;
+          margin: 0;
+          padding-bottom: 30px;
+        }
+        p {
+          font-size: 16px;
+          font-family: "Raleway";
+          font-weight: 300;
+          width: 100%;
+          color: $grey-p-color;
+        }
+      }
+    }
+  }
+  .carousel-indicators .active-ind-but {
+    background-color: $active-bg-carousel-indicator;
+  }
+  .carousel-indicators {
+    margin: 0;
+    bottom: -80px;
+    .not-act-button {
+      background-color: $not-active-bg-car-ind;
+    }
+  }
+}
+
+// Footer
+
+.footer {
+  margin: 0;
+  padding: 0;
+  margin: auto;
+  footer {
+    padding: 74px 98px;
+    background-color: $dark-bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      color: $orange-color;
+    }
+    .bi-c-circle {
+      padding-left: 10px;
+    }
+    .middle-part-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .socs {
+      margin-top: 33px;
+      font-size: 20px;
+      a {
+        color: white;
+      }
+      .bi-instagram {
+        padding: 0 35px;
+      }
+    }
+  }
+}
+
+// MEDIA 768px
+
+@media screen and (max-width: 768px) {
+  // Header
+
+  header {
+    background: url(images/768/header/header-pic1.png) center center/cover;
+    height: 1090px;
+    position: relative;
+    .left-dark-part {
+      width: 100%;
+      height: 100%;
+      opacity: 0.85;
+      .socs {
+        display: none;
+      }
+    }
+    .top-part-header {
+      padding-top: 45px;
+      .icon-burger {
+        position: absolute;
+        display: flex;
+        width: 50px;
+        top: 22px;
+        right: 0;
+        z-index: 4;
+      }
+      .logo-div {
+        .logo {
+          display: none;
+        }
+        .footer-logo {
+          display: block;
+          position: absolute;
+          top: 45px;
+          left: 0;
+          z-index: 2;
+          padding-left: 0;
+        }
+      }
+      .phone-icon {
+        display: none;
+      }
+    }
+    .slider-div {
+      display: none;
+    }
+    .text-left-part {
+      width: 100%;
+      top: 25%;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+      padding: 0 20px;
+      .bi-arrow-down {
+        display: flex;
+        font-family: Fontawesome;
+        color: rgb(184, 184, 184);
+        font-size: 80px;
+        margin-top: 60px;
+        z-index: 4;
+      }
+      h1 {
+        width: 100%;
+        color: $white-color-fff;
+        font-size: 16.5vw;
+        font-family: "PlayfairDisplayBold";
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      .bottom-button {
+        font-size: 30px;
+        width: 434px;
+        padding: 30px 0;
+        margin: 0;
+        margin-top: 33px;
+        border-radius: 5px;
+        svg {
+          display: none;
+        }
+      }
+      p {
+        width: 100%;
+        font-size: 26px;
+        color: $light-grey-color;
+        padding: 0;
+        padding-top: 55px;
+      }
+    }
+  }
+
+  // Gallery item
+
+  .item-gallery {
+    position: relative;
+    padding: 0 47px 0 36px;
+    max-width: 100%;
+    display: flex;
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .item1 {
+      width: 48%;
+      padding-top: 40px;
+      padding-bottom: 0;
+      padding-right: 0;
+    }
+    .item2 {
+      width: 48%;
+      padding-top: 40px;
+      position: relative;
+      top: 170px;
+      padding-bottom: 0;
+      padding-right: 0;
+    }
+    .item3 {
+      position: absolute;
+      width: 48%;
+      top: 480px;
+      padding-right: 0;
+    }
+    .item4 {
+      position: absolute;
+      width: 48%;
+      top: 650px;
+      right: 0;
+      padding-right: 0;
+    }
+    .number-p {
+      font-size: 85.43px;
+    }
+    h3 {
+      font-size: 24px;
+      margin-top: -5px;
+      margin-bottom: -15px !important;
+    }
+    p {
+      font-family: "Raleway";
+      font-weight: 300;
+      padding-top: 30px;
+      font-size: 18px;
+      color: $grey-p-color;
+    }
+  }
+
+  // Portfolio
+
+  .portfolio {
+    padding: 0;
+    padding-top: 780px;
+    padding-bottom: 300px;
+    h2 {
+      @include h2-style;
+      margin: 0;
+      padding-left: 36px;
+      padding-bottom: 30px;
+      padding-right: 47px;
+    }
+    ul {
+      padding-bottom: 40px;
+      padding-left: 36px;
+      a {
+        &:hover {
+          color: black;
+          border-bottom: none;
+        }
+      }
+    }
+    .portfolio-items {
+      display: flex;
+      justify-content: space-between;
+      img {
+        height: 600px;
+        object-fit: cover;
+      }
+      .portfolio-item4 {
+        display: none;
+      }
+      .portfolio-item1 {
+        position: relative;
+        perspective: 0px;
+        h3 {
+          top: 650px;
+          left: 250px;
+          font-size: 20px;
+          color: rgba(0, 0, 0, 0.84);
+          padding: 0;
+          width: 300px;
+          margin: 0;
+        }
+        .portfolio-p {
+          display: none;
+        }
+      }
+      .portfolio-item2 {
+        position: relative;
+        margin: 0 80px;
+        a {
+          .orange-bg {
+            display: none;
+          }
+          .bi-plus-lg {
+            display: none;
+          }
+        }
+      }
+      .portfolio-item3 {
+        h3 {
+          display: none;
+        }
+        .portfolio-p {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Our Service
+  .service {
+    margin-top: 190px;
+    padding: 0;
+    margin: 0;
+    h2 {
+      @include h2-style;
+      padding-left: 36px;
+      margin: 0;
+    }
+    .our-service {
+      display: block;
+      padding-bottom: 200px;
+      .aside-service {
+        display: block;
+        padding: 0;
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: row !important;
+          flex-wrap: wrap !important;
+          justify-content: space-between;
+          font-size: 18px;
+          margin: 0;
+          padding: 0;
+          padding-left: 36px;
+          padding-right: 36px;
+          li {
+            margin-bottom: 80px;
+            width: 330px;
+            br {
+              display: none;
+            }
+            a {
+              font-size: 22px;
+              transition: 0.2s;
+              &:hover {
+                font-weight: 600;
+                color: black;
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+      .main-block-service {
+        padding: 0;
+        width: 100%;
+        .service-image {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+        }
+        .general-block {
+          position: relative;
+          display: block;
+          padding: 0 47px 0 36px;
+          .service-text-block {
+            p {
+              width: 70%;
+            }
+          }
+          .service-right-block {
+            padding-top: 50px;
+            display: block;
+            width: 100%;
+            a {
+              width: 50%;
+              display: flex !important;
+              text-align: center;
+              justify-content: center;
+              // display: block;
+              // text-transform: uppercase;
+              // color: #213a50;
+              // font-family: "Raleway";
+              // // font-weight: 800;
+              // letter-spacing: 2px;
+              // border: 2px solid #213a50;
+              padding: 20px 25px;
+            }
+            p {
+              position: absolute;
+              top: 65px;
+              right: 47px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // About Studio Section
+
+  .about-studio {
+    background: url(images/o-studii-designa/47.png) center center/cover
+      no-repeat;
+    height: 600px;
+    width: 100%;
+    p {
+      text-align: center;
+      width: 430px;
+      font-size: 22px;
+    }
+  }
+
+  // Work Stages
+
+  .work-stages {
+    padding: 133px 47px 0 36px;
+    h2 {
+      @include h2-style;
+      padding-left: 0;
+      margin: 0;
+    }
+    h3 {
+      font-size: 21px;
+    }
+    p {
+      padding-top: 25px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .work-row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 145px;
+      .work-stage-item1,
+      .work-stage-item2,
+      .work-stage-item3,
+      .work-stage-item4,
+      .work-stage-item5,
+      .work-stage-item6 {
+        display: flex;
+        justify-content: left;
+        width: 339px;
+        margin-bottom: 70px;
+      }
+    }
+    .work-stage-text-part {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+    i {
+      display: flex;
+      justify-content: center;
+      font-size: 22px;
+      color: #fce6d2;
+      background-color: black;
+      border-radius: 50px;
+      height: 22px;
+      margin-right: 0;
+      margin-top: 0;
+    }
+    .work-stage-text-part {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+  }
+
+  // Do you dreaam about design?
+
+  .form-sect {
+    height: auto;
+    padding: 0;
+    position: relative;
+    .form-section {
+      background-color: $dark-bg;
+      height: 100%;
+      width: 100%;
+      padding: 78px 47px 78px 36px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      opacity: 0.9;
+      .form {
+        width: 100%;
+        position: relative;
+        padding: 0 90px 0 90px;
+        input {
+          width: 100%;
+          padding-bottom: 10px;
+          padding-top: 50px;
+          outline: none;
+          font-size: 18px;
+        }
+        .bi-person {
+          right: 90px;
+          top: 45px;
+          font-size: 25px;
+        }
+        .bi-telephone-forward {
+          right: 90px;
+          top: 130px;
+          font-size: 20px;
+        }
+        .bi-envelope {
+          right: 90px;
+          top: 220px;
+          font-size: 20px;
+        }
+      }
+      a {
+        width: 60%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 15px;
+        background-color: $orange-color;
+        border: none;
+        padding: 20px 185px;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+      h2 {
+        @include h2-style;
+        margin: 0;
+        color: $white-color-fff;
+        padding: 0;
+        font-size: 45px;
+        line-height: 1.4;
+      }
+      p {
+        width: 100%;
+        font-size: 22px;
+        padding: 0;
+        padding: 20px 110px 0 110px;
+        margin: auto;
+        line-height: 1.2;
+        br {
+          display: none;
+        }
+      }
+      .after-button-p {
+        padding: 0;
+        font-size: 18px;
+        padding: 0 100px 0 100px;
+        line-height: 1.2;
+      }
+    }
+    .photo-section {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      opacity: 1;
+      background: url(images/desire-about-design/kitchen2.png) no-repeat
+        center/cover !important;
+      img {
+        display: none;
+      }
+    }
+  }
+
+  // Feedback
+
+  .feedback {
+    margin: auto;
+    padding-bottom: 200px;
+    text-align: left;
+    padding-top: 150px;
+    position: relative;
+    .third {
+      display: none !important;
+    }
+    .second {
+      display: none !important;
+    }
+    h2 {
+      @include h2-style;
+      margin: 0;
+      padding-bottom: 100px;
+    }
+    .carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-inner {
+      background-color: $white-color-fff;
+      margin: 0;
+      width: 70%;
+      height: 300px;
+      padding: 50px 50px 50px 60px;
+      display: flex;
+      align-items: center;
+      overflow: visible;
+      .carousel-item {
+        display: flex;
+        .main-pic {
+          position: absolute;
+          right: -180px;
+          top: 20px;
+          width: 220px;
+          height: 220px;
+        }
+        .carousel-caption {
+          position: static;
+          width: 90% !important;
+          text-align: left;
+          h4 {
+            font-size: 22px;
+            font-family: "Raleway";
+            font-weight: 600;
+            color: $h3-color;
+          }
+          h5 {
+            font-family: "Raleway";
+            font-size: 16px;
+            font-weight: 700;
+            color: $orange-color;
+            margin: 0;
+            padding-bottom: 30px;
+          }
+          p {
+            font-size: 16px;
+            font-family: "Raleway";
+            font-weight: 300;
+            width: 100%;
+            color: $grey-p-color;
+          }
+        }
+      }
+    }
+    .carousel-indicators .active-ind-but {
+      background-color: $active-bg-carousel-indicator;
+    }
+    .carousel-indicators {
+      margin: 0;
+      bottom: -80px;
+      .not-act-button {
+        background-color: $not-active-bg-car-ind;
+      }
+    }
+  }
+
+  // Footer
+
+  .footer {
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    footer {
+      padding: 60px 47px 60px 36px;
+      background-color: $dark-bg;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        color: $orange-color;
+      }
+      .bi-c-circle {
+        padding-left: 10px;
+      }
+      .middle-part-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .socs {
+        margin-top: 33px;
+        font-size: 20px;
+        a {
+          color: white;
+        }
+        .bi-instagram {
+          padding: 0 35px;
+        }
+      }
+    }
+  }
+}
+
+// MEDIA 768px
+
+@media screen and (max-width: 320px) {
+  // Header
+
+  header {
+    background: url(images/768/header/header-pic1.png) center center/cover;
+    height: 600px;
+    position: relative;
+    .left-dark-part {
+      width: 100%;
+      height: 600px;
+      opacity: 0.85;
+    }
+    .top-part-header {
+      width: 100%;
+      padding-top: 45px;
+      .icon-burger {
+        position: absolute;
+        display: flex;
+        width: 30px;
+        top: 16px;
+        right: -40px;
+        z-index: 4;
+      }
+      .phone-icon {
+        display: none;
+      }
+      .logo-div {
+        .logo {
+          display: none;
+        }
+        .footer-logo {
+          width: 40px;
+          display: block;
+          position: absolute;
+          top: 30px !important;
+          left: -75px;
+          z-index: 2;
+          padding-left: 0;
+        }
+      }
+    }
+    .slider-div {
+      .carousel-indicators {
+        display: none;
+      }
+      img {
+        display: none;
+      }
+    }
+    .socs {
+      display: none;
+    }
+    .text-left-part {
+      width: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 10px;
+      h1 {
+        color: $white-color-fff;
+        font-size: 15vw;
+        font-family: "PlayfairDisplayBold";
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+      .bottom-button {
+        font-size: 14px;
+        width: 220px;
+        padding: 20px 0;
+        margin: 0;
+        margin-top: 28px;
+        border-radius: 1px;
+        svg {
+          display: none;
+        }
+      }
+      p {
+        font-family: "MullerThin";
+        width: 100%;
+        font-size: 18px;
+        color: $light-grey-color;
+        padding: 0;
+        padding-top: 30px;
+        line-height: 1;
+      }
+      .bi-arrow-down {
+        display: flex;
+        font-family: Fontawesome;
+        color: rgb(184, 184, 184);
+        font-size: 40px;
+        z-index: 4;
+        margin-top: 40px;
+      }
+    }
+  }
+
+  // Gallery item
+
+  .item-gallery {
+    padding: 0 10px;
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 1020px;
+    .row {
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column !important;
+      .item1 {
+        width: 100%;
+        display: block;
+        h3 {
+          padding-right: 5px;
+        }
+      }
+      .item2 {
+        width: 100%;
+        position: absolute;
+        top: 330px;
+      }
+      .item3 {
+        width: 100%;
+        position: absolute;
+        top: 700px;
+      }
+      .item4 {
+        width: 100%;
+        position: absolute;
+        top: 1030px;
+      }
+      .number-p {
+        font-size: 85.43px;
+        font-family: "PlayfairDisplayBold";
+        color: $number-p;
+      }
+      h3 {
+        font-size: 24px;
+        margin-top: -5px;
+        margin-bottom: -15px !important;
+        line-height: 1.2;
+      }
+      p {
+        font-family: "Raleway";
+        font-weight: 300;
+        padding-top: 30px;
+        font-size: 18px;
+        color: $grey-p-color;
+      }
+    }
+  }
+
+  // Portfolio
+
+  .portfolio {
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    .container {
+      display: none !important;
+    }
+    h2 {
+      @include h2-style;
+      margin: 0;
+      padding-left: 10px;
+      padding-bottom: 30px;
+      padding-right: 10px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 5px;
+      padding-left: 10px;
+      li {
+        padding-bottom: 40px;
+        a {
+          font-size: 22px;
+          margin: 0;
+          &:hover {
+            color: black;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .portfolio-items {
+      img {
+        height: 527px;
+        width: 258px;
+        object-fit: cover;
+      }
+      .portfolio-item4 {
+        display: none;
+      }
+      .portfolio-item1 {
+        position: relative;
+        perspective: 0px;
+        h3 {
+          top: 550px;
+          left: 15px;
+          font-size: 18px;
+          color: rgba(0, 0, 0, 0.84);
+          padding: 0;
+          width: 300px;
+          margin: 0;
+          letter-spacing: 1.5px;
+        }
+        .portfolio-p {
+          display: none;
+        }
+      }
+      .portfolio-item2 {
+        position: relative;
+        margin: 0 15px;
+        a {
+          .orange-bg {
+            display: none;
+          }
+          .bi-plus-lg {
+            display: none;
+          }
+        }
+      }
+      .portfolio-item3 {
+        h3 {
+          display: none;
+        }
+        .portfolio-p {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Our Service
+  .service {
+    margin-top: 50px;
+    padding: 0;
+    margin: 0;
+    h2 {
+      @include h2-style;
+      padding-left: 10px;
+      margin: 0;
+    }
+    .our-service {
+      display: block;
+      padding-bottom: 150px;
+      .aside-service {
+        display: block;
+        padding: 0;
+        width: 100%;
+        ul {
+          display: flex;
+          flex-direction: column;
+          font-size: 18px;
+          margin: 0;
+          padding: 0;
+          padding-left: 10px;
+          padding-right: 36px;
+          li {
+            margin-bottom: 40px;
+            width: 330px;
+            br {
+              display: none;
+            }
+            a {
+              font-size: 22px;
+              transition: 0.2s;
+              &:hover {
+                font-weight: 600;
+                color: black;
+                padding: 0;
+              }
+            }
+          }
+        }
+      }
+
+      .main-block-service {
+        padding: 0;
+        width: 100%;
+        padding-top: 30px;
+        h3 {
+          display: none;
+        }
+        p {
+          padding-top: 25px;
+          padding-right: 10px;
+        }
+        .service-image {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+          object-position: 33% 50%;
+        }
+        .general-block {
+          position: relative;
+          display: block;
+          width: 100% !important;
+          padding: 0 10px 0 10px;
+          .service-right-block {
+            padding-top: 50px;
+            display: flex;
+            a {
+              width: 70%;
+              text-align: center;
+              padding: 20px 30px;
+              margin: auto;
+            }
+            p {
+              display: none;
+            }
+          }
+          .service-text-block {
+            p {
+              width: 90%;
+              padding: 0;
+              text-align: left;
+              padding-top: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // About Studio Section
+
+  .about-studio {
+    background: url(images/o-studii-designa/47.png) center center/cover
+      no-repeat;
+    height: 615px;
+    width: 100%;
+    p {
+      text-align: center;
+      width: 95%;
+      font-size: 22px;
+      line-height: 1.4;
+    }
+  }
+
+  // Work Stages
+
+  .work-stages {
+    padding: 133px 10px 0 10px;
+    h2 {
+      @include h2-style;
+      padding-left: 0;
+      margin: 0;
+      text-align: center;
+    }
+    h3 {
+      font-size: 21px;
+    }
+    p {
+      padding-top: 25px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .work-row {
+      display: block;
+      flex-direction: column;
+      margin-bottom: 145px;
+      .work-stage-item1,
+      .work-stage-item2,
+      .work-stage-item3,
+      .work-stage-item4,
+      .work-stage-item5,
+      .work-stage-item6 {
+        display: flex;
+        width: 100%;
+        justify-content: left;
+        margin-bottom: 40px;
+        text-align: left;
+      }
+    }
+    .work-stage-text-part {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+    i {
+      display: none;
+    }
+    .work-stage-text-part {
+      display: flex;
+      flex-direction: column;
+      margin: 0 !important;
+    }
+  }
+
+  // Do you dreaam about design?
+
+  .form-sect {
+    height: auto;
+    padding: 0;
+    position: relative;
+    .form-section {
+      background-color: $dark-bg;
+      height: 100%;
+      width: 100%;
+      padding: 78px 10px 78px 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+      opacity: 0.9;
+      .form {
+        width: 100%;
+        position: relative;
+        padding: 0 10px 0 10px;
+        input {
+          width: 100%;
+          padding-bottom: 10px;
+          padding-top: 40px;
+          outline: none;
+          font-size: 18px;
+        }
+        .bi-person,
+        .bi-telephone-forward,
+        .bi-envelope {
+          display: none;
+        }
+      }
+      a {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 15px;
+        background-color: $orange-color;
+        border: none;
+        padding: 20px 80px;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+      h2 {
+        @include h2-style;
+        margin: 0;
+        color: $white-color-fff;
+        padding: 0;
+        font-size: 45px;
+        line-height: 1.4;
+      }
+      p {
+        width: 100%;
+        font-size: 18px;
+        padding: 0;
+        padding: 20px 0 0 0;
+        margin: auto;
+        line-height: 1.2;
+        br {
+          display: none;
+        }
+      }
+      .after-button-p {
+        padding: 0;
+        padding-top: 10px;
+        font-size: 18px;
+        line-height: 1;
+      }
+    }
+    .photo-section {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      opacity: 1;
+      background: url(images/desire-about-design/kitchen2.png) no-repeat
+        center/cover !important;
+      img {
+        display: none;
+      }
+    }
+  }
+
+  // Feedback
+
+  .feedback {
+    margin: auto;
+    padding-bottom: 200px;
+    text-align: left;
+    padding-top: 150px;
+    position: relative;
+    .third {
+      display: none !important;
+    }
+    .second {
+      display: none !important;
+    }
+    h2 {
+      @include h2-style;
+      margin: 0;
+      padding-bottom: 180px;
+      padding-left: 0;
+      text-align: center;
+    }
+    .carousel {
+      width: 100%;
+    }
+    .carousel-inner {
+      background-color: $white-color-fff;
+      margin: 0;
+      width: 90%;
+      height: 300px;
+      display: flex;
+      padding-top: 300px;
+      padding-bottom: 230px;
+      align-items: center;
+      overflow: visible;
+      .carousel-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .main-pic {
+          position: absolute;
+          right: -20px;
+          top: -250px;
+          width: 220px;
+          height: 220px;
+        }
+        .carousel-caption {
+          position: static;
+          width: 100% !important;
+          text-align: center;
+          // padding: 140px 10px 10px 10px;
+          padding: 0;
+          h4 {
+            font-size: 22px;
+            font-family: "Raleway";
+            font-weight: 600;
+            color: $h3-color;
+          }
+          h5 {
+            font-family: "Raleway";
+            font-size: 16px;
+            font-weight: 700;
+            color: $orange-color;
+            margin: 0;
+            padding-bottom: 30px;
+          }
+          p {
+            font-size: 16px;
+            font-family: "Raleway";
+            font-weight: 300;
+            width: 100% !important;
+            color: $grey-p-color;
+          }
+        }
+      }
+    }
+    .carousel-indicators .active-ind-but {
+      background-color: $active-bg-carousel-indicator;
+    }
+    .carousel-indicators {
+      margin: 0;
+      bottom: -80px;
+      .not-act-button {
+        background-color: $not-active-bg-car-ind;
+      }
+    }
+  }
+
+  // Footer
+
+  .footer {
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    footer {
+      padding: 60px 10px 60px 10px;
+      background-color: $dark-bg;
+      position: relative;
+      height: 400px;
+      .left-part-footer {
+        position: absolute;
+        top: 65%;
+        left: 28%;
+      }
+      p {
+        color: $orange-color;
+      }
+      .bi-c-circle {
+        display: none;
+      }
+      .middle-part-footer {
+        position: absolute;
+        top: 30%;
+        left: 27%;
+        .socs {
+          margin-top: 33px;
+          font-size: 20px;
+          a {
+            color: white;
+          }
+          .bi-instagram {
+            padding: 0 45px;
+          }
+        }
+      }
+      .right-part-footer {
+        position: absolute;
+        top: 72%;
+        left: 32%;
+      }
+    }
+  }
+}
