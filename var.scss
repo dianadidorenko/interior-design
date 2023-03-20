@@ -1,0 +1,24 @@
+$max-width: 1365px;
+$container-width: 1170px;
+
+$container-max-widths: (
+  sm: 320px,
+  md: 768px,
+  lg: 1365px
+);
+
+// Colors
+
+$dark-bg: #132f48;
+$active-bg-carousel-indicator: #1b464c;
+$not-active-bg-car-ind: #cdd3cf;
+$white-color-fff-half-opacity: rgba(255, 255, 255, 0.5);
+$white-color-fff: #fff;
+$dark-brown-color: #504f4e;
+$light-grey-color: rgb(225, 225, 225);
+$grey-p-color: #9b9a9a;
+$number-p: #fce6d1;
+$h3-color: #1c2b31;
+$orange-color: #f8a25a;
+$orange-color-hover: #ff8b2b;
+$li-color: #a5a3a1;
